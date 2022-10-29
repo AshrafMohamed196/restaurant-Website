@@ -1,0 +1,129 @@
+:root {
+    --btn-color: #e58f00;
+    --about-sec: #1a4645;
+    --nav-bg: #051821;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+
+/* Start Header */
+
+.header {
+    padding: 1rem 7%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: var(--nav-bg);
+}
+
+.logo img {
+    width: 50px;
+}
+
+.navbar a {
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.navbar a:hover {
+    color: var(--btn-color);
+}
+
+.icons div {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    display: none;
+}
+
+.icons div:hover {
+    cursor: pointer;
+}
+
+.icons a {
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--btn-color);
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+.btn-contac:hover {
+    transform: scale(1.1);
+    background: var(--btn-color);
+    border: 1px solid var(--btn-color);
+}
+
+.navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+/* End header */
+
+
+/* Start Home section */
+
+.home {
+    padding: 1rem 7%;
+    background-image: url(../images/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.home .main-home {}
+
+
+/* end Home section */
+
+
+/* Mobile in navbar */
+
+@media(max-width: 767px) {
+    .header {
+        padding: 2rem;
+    }
+    .icons div {
+        display: initial;
+    }
+    .navbar {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 100%;
+        background-color: var(--btn-color);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .navbar a {
+        display: block;
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
