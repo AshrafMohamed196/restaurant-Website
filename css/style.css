@@ -450,7 +450,7 @@ html {
 
 .inner-menu-food {
     flex: 1 1 300px;
-    border: 1px solid wheat;
+    /* border: 1px solid wheat; */
 }
 
 .menu-food-content {
