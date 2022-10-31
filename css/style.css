@@ -2,7 +2,43 @@
     --btn-color: #e58f00;
     --about-sec: #1a4645;
     --nav-bg: #051821;
+    --paragraph: #f58800;
 }
+
+
+/* start custom buttom */
+
+
+/* .frame {
+width: 90%;
+margin: 40px auto;
+text-align: center;
+} */
+
+button {
+    margin: 20px;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    font-size: 1.7rem;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+
+/* End custom buttom */
 
 * {
     padding: 0;
@@ -10,8 +46,7 @@
     box-sizing: border-box;
     outline: none;
     text-decoration: none;
-    font-family: sans-serif;
-    transition: 0.5s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: capitalize;
 }
 
@@ -90,16 +125,363 @@ html {
 .home {
     padding: 1rem 7%;
     background-image: url(../images/background.png);
+    min-height: 100vh;
+    height: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
-.home .main-home {}
+.home .main-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* position: relative; */
+}
+
+.home-inner-content {
+    flex: 1 1 45rem;
+}
+
+.home-image img {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.home-text-content {
+    color: white;
+    padding: 0 6rem;
+}
+
+.home-text-content h1 {
+    font-size: 5rem;
+    color: var(--btn-color);
+}
+
+.home-text-content p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+
+/* header Contact Us button */
+
+.btn-7 {
+    background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.btn-7 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-7:before,
+.btn-7:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9), -4px -4px 5px 0px rgba(255, 255, 255, .9), 7px 7px 20px 0px rgba(0, 0, 0, .2), 4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-7:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-7:hover {
+    color: rgba(251, 75, 2, 1);
+    background: transparent;
+}
+
+.btn-7:hover:before {
+    height: 100%;
+}
+
+.btn-7:hover:after {
+    width: 100%;
+}
+
+.btn-7 span:before,
+.btn-7 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9), -4px -4px 5px 0px rgba(255, 255, 255, .9), 7px 7px 20px 0px rgba(0, 0, 0, .2), 4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-7 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-7 span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.btn-7 span:hover:before {
+    height: 100%;
+}
+
+.btn-7 span:hover:after {
+    width: 100%;
+}
 
 
 /* end Home section */
+
+
+/* Start About Section */
+
+.about {
+    padding: 4rem 7%;
+    background: var(--about-sec);
+}
+
+.about-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30x;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    flex: 1 1 45rem;
+}
+
+.about-inner-content {
+    padding: 0 4rem;
+}
+
+.about-inner-content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+    padding-bottom: 3rem;
+}
+
+.about .about-inner-content img {
+    width: 95%;
+}
+
+.about-text-content h1 {
+    font-size: 30px;
+    color: var(--paragraph);
+    border-bottom: 1px solid var(--paragraph);
+    width: 40%;
+    padding: 10px;
+}
+
+.about-text-content p {
+    color: white;
+    margin-top: 10px;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* End About Section */
+
+
+/* Start quality Section  */
+
+.quality {
+    padding: 4rem 7%;
+    background-image: linear-gradient(60.34deg, white 52.45%, var(--btn-color) 52.45%);
+}
+
+.main-quality {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-inner-qualiy {
+    flex: 1 1 45rem;
+}
+
+.quality-content {
+    padding: 0 7rem;
+}
+
+.quality-content h1 {
+    color: var(--btn-color);
+    font-size: 35px;
+    border-bottom: 1px solid var(--paragraph);
+    min-width: 60%;
+    padding: 10px;
+}
+
+.quality-content p {
+    color: var(--about-sec);
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.quality-image {
+    width: 100%;
+}
+
+.quality-image img {
+    width: 100%;
+}
+
+
+/* End quality Section  */
+
+
+/* start Food items section */
+
+.gallary {
+    padding: 5rem 7%;
+    background: var(--about-sec);
+}
+
+.main-gallary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.inner-gallary {
+    flex: 1 1 300px;
+}
+
+.inner-gallary .gallary-image img {
+    width: 100%;
+}
+
+.inner-gallary .gallary-image:hover img {
+    transform: perspective(1000px) rotateX(-4.80deg) rotateY(-10.23deg) scale3d(1.05, 1.05, 1.05);
+    clip-path: polygon(20% 0, 80% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 80%);
+}
+
+
+/* End Food items section */
+
+
+/* start enjoy our food section */
+
+.enjoy-our-food {
+    background: url(../images/enjoye.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-main-content {
+    width: 45%;
+    border: 4px solid white;
+    padding: 2rem;
+}
+
+.food-main-content h1 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.food-main-content p {
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 1rem 0;
+    line-height: 30px;
+}
+
+
+/* End enjoy our food section */
+
+
+/* start menu section */
+
+.our-menu-food {
+    padding: 1rem 7%;
+    background: var(--about-sec);
+}
+
+.our-menu-food h1 {
+    color: var(--btn-color);
+    font-size: 45px;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.main-menu-food {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.inner-menu-food {
+    flex: 1 1 300px;
+    border: 1px solid wheat;
+}
+
+.menu-food-content {
+    width: 100%;
+}
+
+.menu-food-content img {
+    width: 100%;
+}
+
+.menu-food-text {
+    padding: 2rem 2rem;
+}
+
+.menu-food-text h2 {
+    color: var(--btn-color);
+    font-size: 30px;
+}
+
+.menu-food-text p {
+    color: white;
+    font-size: 18px;
+    margin: 2rem 0;
+}
+
+.menu-food-text span {
+    color: var(--paragraph);
+}
+
+
+/* End menu section */
 
 
 /* Mobile in navbar */
@@ -124,6 +506,37 @@ html {
         display: block;
         text-align: center;
         margin: 1rem;
+        padding: 1rem;
+    }
+    .home-text-content {
+        color: white;
+        padding: 0 2rem;
+    }
+    .main-home {
+        padding: 2rem 0;
+    }
+    .about-text-content h1 {
+        width: 50%;
+        padding: 10px;
+    }
+    .quality-content p {
+        color: var(--about-sec);
+        font-size: 1.5rem;
+        margin-top: 10px;
+        font-size: 1.7rem;
+        line-height: 1.7;
+        text-align: justify;
+    }
+    .quality-content h1 {
+        color: var(--about-sec);
+        font-size: 35px;
+        border-bottom: 1px solid var(--about-sec);
+        min-width: 60%;
+        padding: 10px;
+    }
+    .food-main-content {
+        width: 80%;
+        border: 4px solid white;
         padding: 1rem;
     }
 }
